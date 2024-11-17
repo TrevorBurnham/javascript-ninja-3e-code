@@ -1,0 +1,38 @@
+<!--
+Listing 3.1: A small web application with a GUI reacting to events
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Web App Lifecycle</title>
+    <style>
+      #event-list li {
+        font: 1.25rem system-ui;
+        padding: 0.25rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="event-list"></ul>
+    <script>
+      const eventList = document.querySelector("#event-list");
+
+      const appendToEventList = (message) => {
+        const messageElement = document.createElement("li");
+        messageElement.textContent = message;
+        eventList.appendChild(messageElement);
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        appendToEventList('Event "DOMContentLoaded" fired');
+      });
+
+      document.addEventListener("keydown", (evt) => {
+        appendToEventList(`Event "keydown" fired with key = "${evt.key}"`);
+      });
+
+      appendToEventList("End of script reached");
+    </script>
+  </body>
+</html>
