@@ -1,0 +1,40 @@
+<!--
+Listing 6.5: A small web application with an interactive button
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Web App Lifecycle</title>
+    <style>
+      #event-list li {
+        font: 1.25rem system-ui;
+        padding: 0.25rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="button">Click Me!</button>
+    <ul id="event-list"></ul>
+    <script>
+      const eventList = document.querySelector("#event-list");
+
+      const appendToEventList = (message) => {
+        const messageElement = document.createElement("li");
+        messageElement.textContent = message;
+        eventList.appendChild(messageElement);
+      };
+
+      const buttonObject = {
+        clickCount: 0,
+        clickHandler: function () {
+          this.clickCount++;
+          appendToEventList(`Click count: ${this.clickCount}`);
+        },
+      };
+
+      const buttonElement = document.getElementById("button");
+      buttonElement.addEventListener("click", buttonObject.clickHandler);
+    </script>
+  </body>
+</html>
