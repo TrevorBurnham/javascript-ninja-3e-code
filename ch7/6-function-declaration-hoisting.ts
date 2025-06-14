@@ -1,4 +1,9 @@
-sayHello();
-function sayHello() {
-  console.log("Hello, hoisting ninja!");
+greetNinja();
+
+function greetNinja() {
+  console.log(getGreeting());
+}
+
+function getGreeting() {
+  return "Ossu!";
 }
