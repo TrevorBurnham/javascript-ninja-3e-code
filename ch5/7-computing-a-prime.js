@@ -7,7 +7,7 @@ const isPrime = (value) => {
     return false; // 0 and 1 are not prime
   }
 
-  for (var i = 2; i < value; i++) {
+  for (let i = 2; i < value; i++) {
     if (value % i === 0) {
       return false;
     }
