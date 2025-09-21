@@ -1,16 +1,18 @@
+// @ts-check
 import eslint from "@eslint/js";
 import { defineConfig } from "eslint/config";
 import tseslint from "typescript-eslint";
 
-export default defineConfig(
+export default defineConfig([
   {
-    ignores: ["eslint.config.mjs"],
+    extends: [eslint.configs.recommended],
   },
-  eslint.configs.recommended,
-  ...tseslint.configs.strictTypeChecked,
-  ...tseslint.configs.stylisticTypeChecked,
   {
     files: ["**/*.{ts,mts}"],
+    extends: [
+      tseslint.configs.strictTypeChecked,
+      tseslint.configs.stylisticTypeChecked,
+    ],
     rules: {
       "@typescript-eslint/no-non-null-assertion": "off",
     },
@@ -21,4 +23,4 @@ export default defineConfig(
       },
     },
   },
-);
+]);
