@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "dependencies": {
+    "immer": "^10.2.0"
+  }
+}
