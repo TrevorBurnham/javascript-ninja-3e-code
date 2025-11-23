@@ -4,8 +4,10 @@ const ninjas = [
   { name: "Kuma" },
 ];
 
+const collator = new Intl.Collator();
+
 ninjas.sort((ninja1, ninja2) =>
-  ninja1.name.localeCompare(ninja2.name),
+  collator.compare(ninja1.name, ninja2.name),
 );
 
 console.assert(
