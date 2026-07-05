@@ -21,4 +21,3 @@ console.assert(
   isZipCode("123456789-") === false,
   "123456789- is not a valid ZIP code.",
 );
-\^$.|?*+()[]
