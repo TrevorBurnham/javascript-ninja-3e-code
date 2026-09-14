@@ -1,0 +1,9 @@
+{
+  "name": "entry-point-example",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./lib/index.js",
+    "./ninjas/*": "./lib/ninjas/*.js"
+  }
+}
