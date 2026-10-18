@@ -1,3 +1,3 @@
 export default "Ranma";
-export const tsundere = "Lum";
+export const tsundere = "Akane";
 export const yandere = "Shampoo";

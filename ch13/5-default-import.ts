@@ -8,8 +8,8 @@ console.assert(
   "Ranma is the hero",
 );
 console.assert(
-  tsundere === "Lum",
-  "Lum is the tsundere",
+  tsundere === "Akane",
+  "Akane is the tsundere",
 );
 console.assert(
   yandere === "Shampoo",

@@ -4,5 +4,5 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.yandere = exports.tsundere = void 0;
 exports.default = "Ranma";
-exports.tsundere = "Lum";
+exports.tsundere = "Akane";
 exports.yandere = "Shampoo";
