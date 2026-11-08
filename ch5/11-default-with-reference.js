@@ -10,4 +10,7 @@ function performAction(
   return message;
 }
 
-assert(performAction("Yoshi") === "Yoshi skulking", "Yoshi is skulking");
+console.assert(
+  performAction("Yoshi") === "Yoshi skulking",
+  "Yoshi is skulking",
+);
